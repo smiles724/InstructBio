@@ -40,6 +40,7 @@ be reused to train other kinds of molecular models and obtain a more powerful re
 
 
 <h2 id="Prerequisites">Prerequisites</h2>
+
 InstructBio currently supports Python 3.7. We rely on [PyTorch](https://pytorch.org/) (1.10.0) and 
 [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/) (2.2.0) to execute the code. 
 Notably, please do not install MoleculeACE by `pip install MoleculeACE`, because we make necessary modifications on its original implementation.
@@ -59,6 +60,7 @@ Before implementation of InstructBio, we need to acquire both the labeled and un
 problems: molecular property prediction and the activity cliff estimation. 
 
 <h3 id="unlabeled-data">Unlabeled Data</h3>
+
 Unlabeled data are collected from the common database [ZINC15](https://zinc15.docking.org/), a free database of commercially-available compounds for virtual screening.
 ZINC15 contains over 230 million purchasable compounds in ready-to-dock, 3D formats. You can use DeepChem to attain the unlabeled SMILES of molecules
 via this following script:
@@ -69,9 +71,9 @@ https://github.com/deepchem/deepchem/blob/master/deepchem/molnet/load_function/z
 There are four different sizes of ZINC15: 250K, 1M, 10M, and 270M. We only utilize the 250K and 1M versions.
 
 <h3 id="moleculenet">Molecular Property Prediction</h3> 
+
 We adopt the MoleculeNet [[1]](#1) as the benchmark to evaluate our model for molecular property prediction, where 3 regression tasks and
-6 classification tasks are selected. 
-The data can be obtained from either the official website of MoleculeNet at this [link](https://moleculenet.org/datasets-1) or from GEM [[3]](#3) by
+6 classification tasks are selected. The data can be obtained from either the official website of MoleculeNet at this [link](https://moleculenet.org/datasets-1) or from GEM [[3]](#3) by
 running the following line:
 
 ```
@@ -82,6 +84,7 @@ The name dictionary is listed as follows: `['freesolv', 'esol', 'lipo', 'bbbp', 
 We employ a scaffold splitting to split the dataset into training/validation/test sets. The splitter can be found at `MoleculeACE/benchmark/utils.py`.
 
 <h3 id="ace">Activity Cliff Estimation</h3>
+
 We use the MoleculeACE [[2]](#2) benchmark to validate the capability of our InstructBio in addressing the activity cliff estimation. MoleculeACE contains 
 30 datasets, each corresponding to a target macromolecule. Its data is available at its official GitHub at this 
 [URL](https://github.com/molML/MoleculeACE/tree/main/MoleculeACE/Data/benchmark_data), where data splits are already provided. 
