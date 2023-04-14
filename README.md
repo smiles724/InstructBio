@@ -44,6 +44,7 @@ InstructBio currently supports Python 3.7. We rely on [PyTorch](https://pytorch.
 [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/) (2.2.0) to execute the code. 
 Notably, please do not install MoleculeACE by `pip install MoleculeACE`, because we make necessary modifications on its original implementation.
 Please follow the instruction below to install the necessary environment. 
+
 ```markdown
 pip install torch    # we use torch 1.10.0 & cu113
 pip install -U scikit-learn
@@ -61,6 +62,7 @@ problems: molecular property prediction and the activity cliff estimation.
 Unlabeled data are collected from the common database [ZINC15](https://zinc15.docking.org/), a free database of commercially-available compounds for virtual screening.
 ZINC15 contains over 230 million purchasable compounds in ready-to-dock, 3D formats. You can use DeepChem to attain the unlabeled SMILES of molecules
 via this following script:
+
 ```markdown
 https://github.com/deepchem/deepchem/blob/master/deepchem/molnet/load_function/zinc15_datasets.py
 ```
@@ -90,7 +92,8 @@ we use a stratified scaffold splitting to evaluate the performance of different 
 
 <h2 id="Getting-started">Getting started</h2>
 <h3 id="instructbio-model"> Train Molecular Models by InstructBio</h3>
-In order to realize the semi-supervised learning of our InstrutBio, please run the following line of code:
+In order to realize the semi-supervised learning of our InstrutBio, please run the following line of code:  
+
 ```markdown
 python main.py --model=GIN --data=xxxxxx --critic_epochs=20 --update_label_freq=5 
 ```
@@ -117,6 +120,7 @@ where you need to specify the type of the student model and the teacher model (*
 If you find our helpful and interesting, please consider citing our paper. Thank you! 😜 
 Any kind of question is welcome, and you can directly pull an issue or send emails to [Fang WU](mailto:fw2359@columbia.edu). 
 We are pleased to see future works based on our InstructBio to push the frontier of molecular representation learning through semi-supervised learning. 
+
 ```markdown
 @article{wu2023instructbio,
   title={InstructBio: A Large-scale Semi-supervised Learning Paradigm for Biochemical Problems},
