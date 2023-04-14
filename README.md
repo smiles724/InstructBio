@@ -56,6 +56,7 @@ pip install torch-geometric
 ```
 
 <h2 id="Data-Preparation">Data Preparation</h2>
+
 Before implementation of InstructBio, we need to acquire both the labeled and unlabeled molecular data. In the main text, we select two categories of 
 problems: molecular property prediction and the activity cliff estimation. 
 
@@ -96,6 +97,7 @@ we use a stratified scaffold splitting to evaluate the performance of different 
 
 <h2 id="Getting-started">Getting started</h2>
 <h3 id="instructbio-model"> Train Molecular Models by InstructBio</h3>
+
 In order to realize the semi-supervised learning of our InstrutBio, please run the following line of code:  
 
 ```markdown
@@ -112,6 +114,7 @@ check the code for details. Notably, in order to fast up the training speed for 
 first time reading these unlabeled data points.
 
 <h3 id="teacher-model"> Train Molecular Models on a Hybrid Dataset</h3>
+
 We can also use a molecular model well-trained by InstructBio to produce a hybrid dataset and use that hybrid dataset to train other deep learning 
 architectures. This can be done by running the following code:
 
@@ -121,6 +124,7 @@ python teacher_main.py --model=GIN --teacher_model=GIN --data=xxxxxx --normalize
 where you need to specify the type of the student model and the teacher model (*e.g.,* the one to annotate the unlabeled corpus). 
 
 <h2 id="How-to-cite">How to cite</h2>
+
 If you find our helpful and interesting, please consider citing our paper. Thank you! 😜 
 Any kind of question is welcome, and you can directly pull an issue or send emails to [Fang WU](mailto:fw2359@columbia.edu). 
 We are pleased to see future works based on our InstructBio to push the frontier of molecular representation learning through semi-supervised learning. 
