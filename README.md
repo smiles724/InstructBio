@@ -1,4 +1,4 @@
-# InstructBio: A Large-scale Semi-supervised Learning Paradigm
+# InstructBio: A Large-scale Semi-supervised Learning Paradigm 🐉
 ![repo version](https://img.shields.io/badge/Version-v.%201.0-green)
 ![python version](https://img.shields.io/badge/python-v.3.7-blue)
 ![license](https://img.shields.io/badge/license-MIT-orange)  
