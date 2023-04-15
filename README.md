@@ -35,6 +35,7 @@ be reused to train other kinds of molecular models and obtain a more powerful re
     </li>
     <li><a href="#How-to-cite"> ➤ How to cite</a></li>
     <li><a href="#License"> ➤ Licence</a></li>
+    <li><a href="#Acknowledgement"> ➤ Acknowledgement</a></li>
   </ol>
 </details>
 
@@ -82,6 +83,7 @@ wget https://baidu-nlp.bj.bcebos.com/PaddleHelix/datasets/compound_datasets/chem
 ```
 Notably, before using them, you need to rename the file names rather than putting them into the folder `MoleculeACE/benchmark/Data/benchmark_data`. 
 The name dictionary is listed as follows: `['freesolv', 'esol', 'lipo', 'bbbp', 'bace', 'clintox', 'tox21', 'toxcast', 'sider']`.
+For convenience, we have provided preprocessed MoleculeNet datasets in this repository, and you can directly run relevant tasks.
 We employ a scaffold splitting to split the dataset into training/validation/test sets. The splitter can be found at `MoleculeACE/benchmark/utils.py`.
 
 <h3 id="ace">Activity Cliff Estimation</h3>
@@ -138,12 +140,20 @@ We are pleased to see future works based on our InstructBio to push the frontier
 }
 ```
 
+<h2 id="Acknowledgement">Acknowledgement</h2>
+We would like to thank Dr. Wenhao Gao, Dr and Connor W. Coley from MIT for their valuable advice during the research period of InstructBio. 
+We would also want to express our gratitude to Dr. Siqi Sun from Fudan University, who also gave important help to our study, and MoleculeMind, for
+offering sufficient computational resources to support this project. 
+
+
 <h2 id="License">License</h2>
+
 InstructBio is under MIT license. For use of specific models, please refer to the model licenses found in the original packages.
+
 
 ## References
 <a id="1">[1]</a> 
-Wu, Zhenqin, et al. "MoleculeNet: a benchmark for molecular machine learning." Chemical science 9.2 (2018): 513-530.   
+Wu, Zhenqin, et al. "MoleculeNet: a benchmark for molecular machine learning." Chemical Science 9.2 (2018): 513-530.   
 <a id="2">[2]</a> 
 van Tilborg, Derek, Alisa Alenicheva, and Francesca Grisoni. "Exposing the limitations of molecular machine learning with activity cliffs."
 Journal of Chemical Information and Modeling 62.23 (2022): 5938-5951.   
